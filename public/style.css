@@ -1,3 +1,4 @@
+/*RESET STYLES*/
 * {
     margin: 0;
     padding: 0;
@@ -15,17 +16,94 @@
     overflow: hidden;
   }
   
-  img {
-      width: 50px;
-      height: 50px;
-      border-radius: 100%;
-  } 
+  /* HEADER STYLES */
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* Give the header a subtle drop shadow */
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    /*Always put header on top*/
+    z-index: 999;
+  }
+  header a {
+    color: black;
+    text-decoration: none;
+  }
+  header a h1{
+    font-size: 1.2em;
+  }
+  header img{
+    width: 40px;
+    height: 40px;
+    /*  Rounded corners  */
+    border-radius: 100%;
+  /*   margin: 10px */
+  }
+  
+  main{
+    /* Take up all free space on the screen between header and footer */
+    flex: 1 1 auto;
+    overflow-y: scroll;
+    padding: 20px
+  }
+  
+  main .message{
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: #dfdfdf;
+  }
+  
+  main img{
+    margin-bottom: 20px;
+  }
+  
+  main h2{
+    margin-bottom: 20px
+  }
+  
+  main ul li {
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 20px;
+  }
+  
+  main h5{
+    margin: 20px 0px 10px 0px;
+    color: grey
+  }
+  
+  main p{
+    margin-top: 10px
+  }
+  
+  main a{
+    color: blue;
+    text-decoration: none
+  }
+  
+  
+  main form input, main form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  main form button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+  }
+  
+  /* FOOTER STYLES */
   footer{
     /* Give the footer a shadow too */
     box-shadow: 0px 0px 5px rgba(0,0,0,0.2)
   }
   
-  footer nav {
+  footer nav ul{
     display: flex;
     /*  Put everything on one line  */
     flex-direction: row;
@@ -34,12 +112,12 @@
     align-items: center;
   }
   
-  footer nav  li{
+  footer nav ul li{
     /* Stop everything from hitting the edges of the footer   */
     padding: 10px;
   }
   
-  footer nav li a{
+  footer nav ul li a{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +125,7 @@
     color: black
   }
   
-  footer nav  li a.active{
+  footer nav ul li a.active{
     color: grey;
     pointer-events: none
   }

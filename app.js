@@ -8,9 +8,28 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/index', function(req, res){
-    res.render('index');
+app.get('/', function(req, res){
+    res.render('list');
 });
+
+app.get('/details', function(req, res){
+    res.render('details', {
+        BlackMirror: {
+            title: 'Black Mirror',
+
+        }
+    });
+
+});
+
+app.get('/most-viewed', function(req, res){
+    res.render('most-viewed', {
+        Actor: {
+            name: 'Hugh Jackman'
+        }
+    });
+});
+
 
 app.listen(3000, function(){ 
     console.log('Server running');
